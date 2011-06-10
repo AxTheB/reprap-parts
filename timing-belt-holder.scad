@@ -1,8 +1,9 @@
 $fn=20;
+//thickness of the belt
 radius=2.5;
 
 module zipholder(){
-
+//cut parts of edges so zipties are firmly in place
 translate([3,5,6])
 rotate([0,90,0]){
 scale([1,0.8,1]){
@@ -34,7 +35,7 @@ difference(){
   translate([13.6,5,7])
     cube([radius*2, 2*radius, 12], center=true);
   translate([15.5,5,1])
-    cylinder(r=radius, h=12);
+    #cylinder(r=radius, h=12);
 
   zipholder();
   translate([6,0,0])
